@@ -25,7 +25,7 @@ var ARCarDemo = createReactClass({
   getInitialState() {
     return {
       texture: "white",
-      playAnim: false,
+      playAnim: true,
       animateCar: false,
       tapWhite: false,
       tapBlue: false,
