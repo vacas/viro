@@ -15,6 +15,8 @@ import {
   AppRegistry,
 } from 'react-native';
 
+import HelloWorldSceneAR from './js/ARSample/HelloWorldSceneAR';
+
 import {
   ViroVRSceneNavigator,
   ViroARSceneNavigator,
@@ -46,17 +48,14 @@ var arScenes = {
 
 var showARScene = true;
 
-var ViroCodeSamplesSceneNavigator = createReactClass({
-  render: function() {
-    // return ( <div>hello</div> )
+export default class ViroCodeSamplesSceneNavigator extends Component {
+  render() {
     return (
       <ViroARSceneNavigator
         initialScene={{
-          scene: arScenes['ARCarDemo'],
+          scene: HelloWorldSceneAR,
         }}
         apiKey={apiKey} />
-      );
+    )
   }
-});
-
-module.exports = ViroCodeSamplesSceneNavigator;
+}
