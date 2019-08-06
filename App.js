@@ -11,49 +11,23 @@
 
 import React, { Component } from 'react';
 
-import {
-  AppRegistry,
-} from 'react-native';
-
-import HelloWorldSceneAR from './js/ARSample/HelloWorldSceneAR';
+import HelloWorldAR from './js/ARSample/HelloWorldAR';
+import HelloWorldObjectsAR from './js/ARSample/HelloWorldAR';
+import FunctionalAR from './js/ARSample/HelloWorldAR';
 
 import {
   ViroVRSceneNavigator,
   ViroARSceneNavigator,
 } from 'react-viro';
 
-var createReactClass = require('create-react-class');
-
-/*
- * TODO: Add your API key below!!
- */
-var apiKey = "A2D64875-2513-4E1B-9EDC-CF4048491FF4";
-
-var vrScenes = {
-    '360PhotoTour': require('./js/360PhotoTour/MainScene'),
-    'HumanBody': require('./js/HumanBody/MainScene'),
-    'ProductShowcase': require('./js/ProductShowcase/ProductShowcase'),
-    'ViroMediaPlayer': require('./js/ViroMediaPlayer/ViroTheatre'),
-    'ParticleEmitters': require('./js/ParticleEmitters/ViroParticleTemplates'),
-    'PhysicsSample': require('./js/PhysicsSample/BasicPhysicsSample'),
-}
-
-var arScenes = {
-  'ARSimpleSample': require('./js/ARSample/HelloWorldSceneAR.js'),
-  'ARPhysicsSample': require('./js/ARPhysicsSample/BasicPhysicsSample.js'),
-  'ARCarDemo' : require('./js/ARCarDemo/ARCarDemo.js'),
-  'ARPosterDemo' : require('./js/ARPosterDemo/ARPosterDemo.js'),
-  'BusinessCard' : require('./js/ARBusinessCard/BusinessCard.js'),
-}
-
-var showARScene = true;
+const apiKey = "A2D64875-2513-4E1B-9EDC-CF4048491FF4";
 
 export default class ViroCodeSamplesSceneNavigator extends Component {
   render() {
     return (
       <ViroARSceneNavigator
         initialScene={{
-          scene: HelloWorldSceneAR,
+          scene: HelloWorldAR,
         }}
         apiKey={apiKey} />
     )
