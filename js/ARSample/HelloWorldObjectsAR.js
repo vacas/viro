@@ -46,6 +46,7 @@ ViroAnimations.registerAnimations({
 export default class HelloWorldSceneAR extends Component {
   constructor() {
     super();
+    this._onTrackingUpdated = this._onTrackingUpdated.bind(this);
     this.state = {
       hasARInitialized : false,
       text : "Initializing AR...",

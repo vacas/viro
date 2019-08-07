@@ -12,8 +12,8 @@
 import React, { Component } from 'react';
 
 import HelloWorldAR from './js/ARSample/HelloWorldAR';
-import HelloWorldObjectsAR from './js/ARSample/HelloWorldAR';
-import FunctionalAR from './js/ARSample/HelloWorldAR';
+import HelloWorldObjectsAR from './js/ARSample/HelloWorldObjectsAR';
+import FunctionalAR from './js/ARSample/FunctionalAR';
 
 import {
   ViroVRSceneNavigator,
@@ -27,7 +27,9 @@ export default class ViroCodeSamplesSceneNavigator extends Component {
     return (
       <ViroARSceneNavigator
         initialScene={{
-          scene: HelloWorldAR,
+          // scene: HelloWorldAR,
+          // scene: HelloWorldObjectsAR,
+          scene: FunctionalAR,
         }}
         apiKey={apiKey} />
     )
